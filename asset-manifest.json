@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/frontendmentor_6/static/js/main.22ee2584.js",
+    "main.js": "/frontendmentor_6/static/js/main.90e5f348.js",
     "static/js/787.8fa1994c.chunk.js": "/frontendmentor_6/static/js/787.8fa1994c.chunk.js",
     "index.html": "/frontendmentor_6/index.html",
-    "main.22ee2584.js.map": "/frontendmentor_6/static/js/main.22ee2584.js.map",
+    "main.90e5f348.js.map": "/frontendmentor_6/static/js/main.90e5f348.js.map",
     "787.8fa1994c.chunk.js.map": "/frontendmentor_6/static/js/787.8fa1994c.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.22ee2584.js"
+    "static/js/main.90e5f348.js"
   ]
 }
