@@ -21,6 +21,7 @@ const Title = styled.h1`
   @media ${QUERIES.phoneAndSmaller} {
     text-align: center;
     width: 100%;
+    max-width: 288px;
     font-size: ${20 / 16}rem;
     line-height: ${24 / 16}rem;
   }
@@ -33,6 +34,7 @@ const Cards = styled.div`
   @media ${QUERIES.phoneAndSmaller} {
     width: 100%;
     padding: 0px 24px;
+    justify-content: center;
     gap: 16px;
   }
 `;

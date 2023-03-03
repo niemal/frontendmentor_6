@@ -21,7 +21,7 @@ const Footer = styled.div`
   background-position: 0% 100%;
   margin-top: auto;
   width: 100%;
-  height: 26vh;
+  height: 180px;
   z-index: 4;
 
   @media ${QUERIES.phoneAndSmaller} {
