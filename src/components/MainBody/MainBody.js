@@ -84,7 +84,7 @@ function MainBody() {
       >
         <Countdown />
       </CountdownContext.Provider>
-      <Footer>
+      <Footer role={"contentinfo"}>
         <LinkWrapper>
           <Link href={"/"}>
             <Icon src={"./icon-facebook.svg"} alt={"facebook image"} />

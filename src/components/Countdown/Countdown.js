@@ -114,7 +114,7 @@ function Countdown() {
   useInterval(countdown, 1000);
 
   return (
-    <Wrapper>
+    <Wrapper role={"main"}>
       <Title>WE'RE LAUNCHING SOON</Title>
       <Cards>
         <Card key={"days"} text={"days"} />
