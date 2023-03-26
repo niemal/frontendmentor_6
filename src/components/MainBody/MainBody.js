@@ -2,12 +2,13 @@ import styled from "styled-components";
 import Countdown from "../Countdown";
 import React, { useState, createContext } from "react";
 import { QUERIES } from "../constants";
+import ClickableWrapper from "../ClickableWrapper";
 
 const Wrapper = styled.div`
   min-height: 100vh;
   position: relative;
   background-color: var(--color-very-dark-blue);
-  background-image: url("./bg-stars.svg");
+  background-image: url("/frontendmentor_6/bg-stars.svg");
   background-position: 100% 100%;
   display: flex;
   flex-direction: column;
@@ -17,7 +18,7 @@ const Footer = styled.div`
   align-self: end;
   display: grid;
   place-content: center;
-  background-image: url("./pattern-hills.svg");
+  background-image: url("/frontendmentor_6/pattern-hills.svg");
   background-position: 0% 100%;
   margin-top: auto;
   width: 100%;
@@ -41,6 +42,12 @@ const LinkWrapper = styled.div`
 const Link = styled.a`
   text-decoration: none;
   cursor: pointer;
+  border-radius: 6px;
+
+  &:focus {
+    outline: 2px solid var(--color-white);
+    outline-offset: 10px;
+  }
 `;
 
 const Icon = styled.img`
@@ -86,15 +93,32 @@ function MainBody() {
       </CountdownContext.Provider>
       <Footer role={"contentinfo"}>
         <LinkWrapper>
-          <Link href={"/"}>
-            <Icon src={"./icon-facebook.svg"} alt={"facebook image"} />
-          </Link>
-          <Link href={"/"}>
-            <Icon src={"./icon-pinterest.svg"} alt={"pinterest image"} />
-          </Link>
-          <Link href={"/"}>
-            <Icon src={"./icon-instagram.svg"} alt={"instagram image"} />
-          </Link>
+          <ClickableWrapper href={"/"}>
+            <Link>
+              <Icon
+                src={"/frontendmentor_6/icon-facebook.svg"}
+                alt={"facebook button link"}
+              />
+            </Link>
+          </ClickableWrapper>
+
+          <ClickableWrapper href={"/"}>
+            <Link>
+              <Icon
+                src={"/frontendmentor_6/icon-pinterest.svg"}
+                alt={"pinterest button link"}
+              />
+            </Link>
+          </ClickableWrapper>
+
+          <ClickableWrapper href={"/"}>
+            <Link>
+              <Icon
+                src={"/frontendmentor_6/icon-instagram.svg"}
+                alt={"instagram button link"}
+              />
+            </Link>
+          </ClickableWrapper>
         </LinkWrapper>
       </Footer>
     </Wrapper>

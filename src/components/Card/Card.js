@@ -2,6 +2,7 @@ import styled, { keyframes, css } from "styled-components";
 import React, { useState, useEffect, useContext } from "react";
 import { CountdownContext } from "../MainBody";
 import { QUERIES } from "../constants";
+import VisuallyHidden from "../VisuallyHidden";
 
 const InnerCard = styled.div`
   display: flex;
@@ -122,7 +123,7 @@ const Wrapper = styled.div`
   }
 `;
 
-function Card({ text }) {
+function Card({ key, text }) {
   const { storage, setStorage } = useContext(CountdownContext);
   const [trigger, setTrigger] = useState(false);
 
@@ -142,7 +143,11 @@ function Card({ text }) {
   }, [storage, setStorage, text]);
 
   return (
-    <Wrapper style={{ height: "auto" }}>
+    <Wrapper
+      key={key}
+      aria-describedby={key + "-card"}
+      style={{ height: "auto" }}
+    >
       <Wrapper>
         {trigger ? (
           <CardComponent
@@ -155,7 +160,13 @@ function Card({ text }) {
         )}
         <CardComponent timeValue={storage[text].to} text={text} />
       </Wrapper>
-      <TextWrapper>{text}</TextWrapper>
+      <TextWrapper
+        id={key + "-card"}
+        aria-label={key + " information"}
+        aria-live={"polite"}
+      >
+        {text}
+      </TextWrapper>
     </Wrapper>
   );
 }
